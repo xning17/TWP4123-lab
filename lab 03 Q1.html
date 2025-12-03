@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate Best Sellers Report</title>
+</head>
+<body>
+    <h1>Best Sellers</h1>
+    <p>Search reports based on the following criteria</p>
+    <hr>
+    <form method="get" action="">
+    <label>Start Date:</label>
+    <input type="date" required>
+    <br><br>
+    <label>End Date:</label>
+    <input type="date" required>
+    <label for="orderStatus">Order Status:</label>
+    <select name="Order Status">
+    <option>All</option>
+    <option>Pending</option>
+    <option>Processing</option>
+    <option>Completed</option>
+    <option>Cancelled</option>
+    </select>
+</body>
+</html>

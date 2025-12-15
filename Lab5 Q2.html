@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet"  type="text/css" href="./Lab5 Q1.css">
+    <title>Template Page - Lakeshow Grocer</title>
+
+    <style>
+        .form-section{
+  max-width:900px;
+  margin:40px auto;
+  padding:25px;
+  background:white;
+  box-shadow:var(--shadow);
+  border-radius:16px;
+  text-align:left;
+}
+
+.form-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:15px;
+}
+
+.field label{
+  display:block;
+  margin-bottom:6px;
+  font-weight:600;
+}
+
+.field input,
+.field select,
+.field textarea{
+  width:100%;
+  padding:10px;
+  border:1px solid #ddd;
+  border-radius:10px;
+}
+
+.full{
+  grid-column:1 / -1;
+}
+
+.form-actions{
+  grid-column:1 / -1;
+  display:flex;
+  gap:10px;
+  justify-content:flex-end;
+}
+
+.btn{
+  padding:10px 18px;
+  border:none;
+  border-radius:30px;
+  cursor:pointer;
+}
+
+.btn-primary{
+  background:var(--primary-color);
+  color:white;
+}
+
+.btn-secondary{
+  background:#eee;
+}
+    </style>
+
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <a href=" ">
+          <img
+            class="logo"
+            src=""
+            alt="Lakeshow Grocer Logo"
+          />
+        </a >
+        <div class="search-container">
+          <form id="searchForm" action="product.php" method="GET">
+            <input
+              type="text"
+              name="search"
+              placeholder="Search for fresh products..."
+              class="search-input"
+            />
+            <button type="submit" class="search-button">
+              Search
+            </button>
+          </form>
+        </div>
+        <div class="link-after-login">
+          <a href="cshopcart.php">Shopping Cart</a >
+          <a href="chistory.php">Order History</a >
+          <a href="cprofile.php">Profile</a >
+          <a href="http://127.0.0.1:3000/Lab 05/Lab 05 Q2.html?serverWindowId=cad443be-16b0-46e4-b2a1-77d35cff8f57">Log In</a >
+        </div>
+
+      </div>
+
+      <nav class="navbar">
+        <ul class="nav-links">
+          <li>
+            <a
+              href="#"
+              class="category-link"
+            >
+              Fresh Vegetable
+            </a >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="category-link"
+            >
+              Chilled and Frozen
+            </a >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="category-link"
+            >
+              Snacks
+            </a >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="category-link"
+            >
+              Bakery
+            </a >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="category-link"
+            >
+              Beverages
+            </a >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="category-link"
+            >
+              Household Products
+            </a >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="category-link"
+            >
+              Baby Care
+            </a >
+          </li>
+        </ul>
+      </nav>
+    </header>
+  
+    <section class="form-section">
+  <h1>Product Form</h1>
+
+  <form>
+    <div class="form-grid">
+
+      <div class="field">
+        <label>Product Name *</label>
+        <input type="text" required>
+      </div>
+
+      <div class="field">
+        <label>Category *</label>
+        <select required>
+          <option value="">Select one</option>
+          <option>Fresh Vegetable</option>
+          <option>Chilled and Frozen</option>
+          <option>Snacks</option>
+          <option>Bakery</option>
+          <option>Beverages</option>
+          <option>Household Products</option>
+          <option>Baby Care</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label>Price (RM) *</label>
+        <input type="number" required>
+      </div>
+
+      <div class="field">
+        <label>Stock *</label>
+        <input type="number" required>
+      </div>
+
+      <div class="field full">
+        <label>Description</label>
+        <textarea></textarea>
+      </div>
+
+      <div class="form-actions">
+        <button type="reset" class="btn btn-secondary">Clear</button>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+
+    </div>
+  </form>
+</section>
+
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-about">
+          <img
+            src="img/lakeshow-logo.png"
+            alt="Lakeshow Grocer"
+            class="footer-logo"
+          />
+          <p>
+            Lakeshow Grocer is your premier destination for fresh, high-quality
+            groceries delivered straight to your door. We're committed to
+            supporting local farmers and bringing you the best products.
+          </p >
+          <div class="footer-social">
+            <a
+              href="https://www.facebook.com/profile.php?id=61576813539412"
+              target="_blank"
+              >
+              <img src="/lab 5/img/fblogo.png" alt="facebook"
+            /></a >
+            <a href="https://www.instagram.com/lakeshow_grocer/" target="_blank"
+              ><img src="/lab 5/img/instalogo.png" alt="instagram"
+            /></a >
+            <a href="https://x.com/lakeshowgrocer" target="_blank"
+              ><img src="/lab 5/img/xlogo.png" alt="twitter"
+            /></a >
+          </div>
+        </div>
+
+        <div class="footer-links">
+          <h3 class="footer-heading">Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="main page.php">Home</a ></li>
+            <li><a href="C_About_Us.php">About Us</a ></li>
+            <li><a href="C_Order_History.php">Order History</a ></li>
+          </ul>
+        </div>
+
+        <div class="footer-links">
+          <h3 class="footer-heading">Categories</h3>
+          <ul class="footer-links">
+            <li>
